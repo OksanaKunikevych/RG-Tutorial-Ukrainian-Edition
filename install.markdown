@@ -20,12 +20,12 @@
 
 Натисни на меню та вибери *About this Mac*.
 
-![Apple menu](/images/1.png "Apple menu")
+![Apple menu](http://www.askdavetaylor.com/2-blog-pics/mac-apple-menu-about-this-mac.png "Apple menu")
 
 ### *2.* У вікні ти побачиш інформацію про версію твоєї ОС.
 Якщо номер версії починається з 10.6, 10.7, 10.8, 10.9 чи 10.10, то ця інструкція для тебе.
 
-![About this Mac dialog](/images/2.png "About this Mac dialog")
+![About this Mac dialog](http://fc06.deviantart.net/fs70/f/2013/358/2/8/modern_about_this_mac_logo_by_djtech42-d6z8m33.png "About this Mac dialog")
 
 ### *3a.* Для версії OS X 10.9 та вище:
 Якщо у тебе версія 10.9 чи 10.10,то тобі необхідно установити homebrew та rbenv
@@ -99,7 +99,7 @@ gem update rails --no-ri --no-rdoc
 rails new railsgirls
 ~~~
 
-### *2.* Встановимо текстовий редактор
+### *4.* Встановимо текстовий редактор
 
 Для воркшопу ми рекомендуємо тестовий редактор Atom.
 
@@ -107,7 +107,7 @@ rails new railsgirls
 
 Якщо ти використовуєш Mac OS X 10.7 чи старішу версію, ти можеш використати інший текстовий редактор [Sublime Text 2](http://www.sublimetext.com/2).
 
-### *3.* Оновлення браузера
+### *5.* Оновлення браузера
 
 Відкрий [whatbrowser.org](http://whatbrowser.org) та онови свій браузер, якщо у тебе не остання версія. 
 
