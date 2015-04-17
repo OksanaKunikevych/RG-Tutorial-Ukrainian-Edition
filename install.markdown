@@ -16,7 +16,70 @@
 ## Setup for OS X
 
 
-### *1.* Якщо у тебе OS X версії 10.6, 10.7, or 10.8:
+### *1.* Спочатку перевіримо версію твоєї операційної ситеми.
+
+Натисни на меню та вибери *About this Mac*.
+
+![Apple menu](/images/1.png "Apple menu")
+
+### *2.* У вікні ти побачиш інформацію про версію твоєї ОС.
+Якщо номер версії починається з 10.6, 10.7, 10.8, 10.9 чи 10.10, то ця інструкція для тебе.
+
+![About this Mac dialog](/images/2.png "About this Mac dialog")
+
+### *3a.* Для версії OS X 10.9 та вище:
+Якщо у тебе версія 10.9 чи 10.10,то тобі необхідно установити homebrew та rbenv
+
+#### *3a1.* У терміналі виконай:
+
+{% highlight sh %}
+xcode-select --install
+{% endhighlight %}
+
+#### *3a2.* Установи  [Homebrew](http://brew.sh/):
+
+{% highlight sh %}
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+{% endhighlight %}
+
+#### *3a3.* Установи [rbenv](https://github.com/sstephenson/rbenv):
+
+{% highlight sh %}
+brew update
+brew install rbenv rbenv-gem-rehash ruby-build
+echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+echo 'export PATH="$HOME/.rbenv/shims:$PATH"' >> ~/.bash_profile
+source ~/.bash_profile
+{% endhighlight %}
+
+#### *3a4.* Згенеруй Ruby з rbenv:
+
+Найновішу версію ruby ти можеш знайти за допомогою команди "rbenv install -l".
+
+{% highlight sh %}
+rbenv install 2.2.0
+{% endhighlight %}
+Якщо у тебе з'явилась помилка
+"OpenSSL::SSL::SSLError: ... : certificate verify failed" спробуй:
+
+{% highlight sh %}
+brew install curl-ca-bundle
+cp /usr/local/opt/curl-ca-bundle/share/ca-bundle.crt `ruby -ropenssl -e 'puts OpenSSL::X509::DEFAULT_CERT_FILE'`
+{% endhighlight %}
+
+#### *3a5.* Установка Ruby за замовчуванням
+
+{% highlight sh %}
+rbenv global 2.2.0
+{% endhighlight %}
+
+#### *3a6.* Встановлюємо rails:
+
+{% highlight sh %}
+gem i rails --no-ri --no-rdoc
+{% endhighlight %}
+
+### *3b Якщо у тебе OS X версії 10.6, 10.7, or 10.8:
 Завантаж RailsInstaller для своєї версії OS X:
 
 * [RailsInstaller for 10.7 and 10.8](http://railsinstaller.s3.amazonaws.com/RailsInstaller-1.0.4-osx-10.7.app.tgz) <span class="muted">(325MB)</span>
