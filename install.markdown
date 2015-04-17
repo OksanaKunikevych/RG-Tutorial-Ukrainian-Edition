@@ -25,7 +25,7 @@
 ### *2.* У вікні ти побачиш інформацію про версію твоєї ОС.
 Якщо номер версії починається з 10.6, 10.7, 10.8, 10.9 чи 10.10, то ця інструкція для тебе.
 
-![About this Mac dialog](http://fc06.deviantart.net/fs70/f/2013/358/2/8/modern_about_this_mac_logo_by_djtech42-d6z8m33.png "About this Mac dialog")
+![About this Mac dialog](http://km.support.apple.com/library/APPLE/APPLECARE_ALLGEOS/HT1633/en_US/HT1633_mtlion----en.png "About this Mac dialog")
 
 ### *3a.* Для версії OS X 10.9 та вище:
 Якщо у тебе версія 10.9 чи 10.10,то тобі необхідно установити homebrew та rbenv
