@@ -1,5 +1,5 @@
 
-# Установка необхідних інструментів для Rails Girls
+# Установка необхідних програм для Rails Girls
 
 Для створення додатків на Ruby On Rails необхідно встановити деякі програми на твій комп'ютер.
 
@@ -22,7 +22,7 @@
 * [RailsInstaller for 10.7 and 10.8](http://railsinstaller.s3.amazonaws.com/RailsInstaller-1.0.4-osx-10.7.app.tgz) <span class="muted">(325MB)</span>
 * [RailsInstaller for 10.6](http://railsinstaller.s3.amazonaws.com/RailsInstaller-1.0.4-osx-10.6.app.tgz) <span class="muted">(224MB)</span>
 
-Двічі натисни на завантажений файл і він установиться у поточну папку. Відкрий розархівований файл 'RailsInstaller-1.0.4-osx-10.7.app' або 'RailsInstaller-1.0.4-osx-10.6.app' і слідуй інструкції установки. Відкриється нове вікно з README файлом з 'Rails Installer OS X'. Будь ласка, **не виконуй** інструкції у цьому файлі.
+Двічі натисни на завантажений файл і він установиться у поточну папку. Відкрий розархівований файл `RailsInstaller-1.0.4-osx-10.7.app` або `RailsInstaller-1.0.4-osx-10.6.app` і слідуй інструкції установки. Відкриється нове вікно з README файлом з 'Rails Installer OS X'. Будь ласка, **не виконуй** інструкції у цьому файлі.
 
 Якщо версія Rails не була найновішою, ти можеш просто оновити її набравши у терміналі:
 
@@ -36,7 +36,7 @@ gem update rails --no-ri --no-rdoc
 rails new railsgirls
 ~~~
 
-### *4.* Встановимо текстовий редактор
+### *2.* Встановимо текстовий редактор
 
 Для воркшопу ми рекомендуємо тестовий редактор Atom.
 
@@ -44,7 +44,7 @@ rails new railsgirls
 
 Якщо ти використовуєш Mac OS X 10.7 чи старішу версію, ти можеш використати інший текстовий редактор [Sublime Text 2](http://www.sublimetext.com/2).
 
-### *5.* Оновлення браузера
+### *3.* Оновлення браузера
 
 Відкрий [whatbrowser.org](http://whatbrowser.org) та онови свій браузер, якщо у тебе не остання версія. 
 
@@ -100,7 +100,7 @@ gem -v
 Якщо версія нижча ніж `2.2.3` необхідно оновити її вручну:
 
 
-Спочатку скачуємо [ruby-gems-update gem](https://github.com/rubygems/rubygems/releases/download/v2.2.3/rubygems-update-2.2.3.gem). Переміщаємо файл у `c:\\rubygems-update-2.2.3.gem` і запускаємо:
+Спочатку завантажимо [ruby-gems-update gem](https://github.com/rubygems/rubygems/releases/download/v2.2.3/rubygems-update-2.2.3.gem). Перемісти файл у `c:\\rubygems-update-2.2.3.gem` і запусти його:
 
 ~~~
 gem install --local c:\\rubygems-update-2.2.3.gem
@@ -120,10 +120,12 @@ gem -v
 ### 'x64_mingw' is not a valid platform` Error
 
 Інколи при запуску `rails server` виникає помилка:
-`'x64_mingw' is not a valid platform` If you experience this error after using the RailsInstaller you have to do a small edit to the file `Gemfile`:
+`'x64_mingw' is not a valid platform` 
+
+Тоді необхідно трохи відредагувати `Gemfile`:
 
 Подивись в кінець файлу. Ти побачиш схожі рядки:
-`gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]`. If you have this line with `:x64_mingw`, then please delete the `:x64_mingw` part. Вкінці повиннен бути лише рядок:
+`gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]`. Якщо у тебе є рядок з `:x64_mingw`,тоді видали `:x64_mingw`  Вкінці повиннен бути лише рядок:
 `'tzinfo-data', platforms: [:mingw, :mswin]`
 
 Після змін введи в командному рядку `bundle update`.
@@ -142,7 +144,7 @@ gem -v
 
 Відкрий [whatbrowser.org](http://whatbrowser.org) та онови свій браузер, якщо у тебе не остання версія. 
 
-Це все! Тепер у тебе все необхідне для створення свого першого додатку на Ruby on Rails:)
+Це все! Тепер у тебе все необхідне для створення свого першого додатка на Ruby on Rails:)
 <hr />
 
 ## Setup for Linux
@@ -158,7 +160,7 @@ gem -v
 bash < <(curl -sL https://raw.github.com/railsgirls/installation-scripts/master/rails-install-ubuntu.sh)
 ~~~
 
-Якщо ти будеш використовувати RVM установку з gnome-terminal, тобі необхідно буде ванням. Тут детальніше як це зробити: [RVM documentation](http://rvm.io/integration/gnome-terminal).
+Якщо ти будеш використовувати RVM установку з gnome-terminal, то тут ти знайдеш детальніше як це зробити: [RVM documentation](http://rvm.io/integration/gnome-terminal).
 
 #### Для Fedora:
 
