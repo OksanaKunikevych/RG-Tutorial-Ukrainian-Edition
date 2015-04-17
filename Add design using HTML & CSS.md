@@ -9,15 +9,11 @@
 
 Відкриємо `app/assets/stylesheets/application.css`, замінимо рядок
 ~~~
-{% highlight html %}
 body { padding-top: 100px; }
-{% endhighlight %}
 ~~~
 на рядок
 ~~~
-{% highlight html %}
 body { padding-top: 60px; }
-{% endhighlight %}
 ~~~
 Також, видалимо файл `app/assets/stylesheets/scaffolds.css.scss` тому, що нам не потрібно стилю за замовчуванням,який генерує Rails.
 
@@ -29,15 +25,11 @@ body { padding-top: 60px; }
 
 Відкриваємо `app/views/layouts/application.html.erb`, під рядками
 ~~~~
-{% highlight erb %}
 <li class="active"><a href="/ideas">Ideas</a></li>
-{% endhighlight %}
 ~~~
 додаємо
 ~~~
-{% highlight erb %}
 <li ><%= link_to 'New Idea', new_idea_path %></li>
-{% endhighlight %}
 ~~~
 ## *3.*Дизайн списку ідей
 
@@ -47,7 +39,6 @@ body { padding-top: 60px; }
 
 Відкриємо `app/views/ideas/index.html.erb` у текстовому редакторі та замінимо всі рядки на: 
 ~~~
-{% highlight erb %}
 <h1>Listing ideas</h1>
 
 <% @ideas.in_groups_of(3) do |group| %>
@@ -61,7 +52,6 @@ body { padding-top: 60px; }
     <% end %>
   </div>
 <% end %>
-{% endhighlight %}
 ~~~
 **Тренер:** Пояснити що означає новий код вище і розказати трохи про Bootstrap 12 grids layout. 
 
@@ -71,7 +61,6 @@ body { padding-top: 60px; }
 
 Відкриваємо `app/views/ideas/show.html.erb` у текстовому редакторі та заміняємо всі рядки на:
 ~~~
-{% highlight erb %}
 <p id="notice"><%= notice %></p>
 
 <div class="row">
@@ -89,7 +78,6 @@ body { padding-top: 60px; }
     </p>
   </div>
 </div>
-{% endhighlight %}
 ~~~
 
 **Тренер:** Пояснення, що означає код вище.
