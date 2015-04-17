@@ -6,7 +6,7 @@ permalink: commenting
 # Додаємо коментування
 *Created by Janika Liiv, [@janikaliiv](https://twitter.com/janikaliiv)*
 
-Зараз ми реалізуємо можливість додавання коментарів до ідей у твоїй першій програмі.
+Зараз ми реалізуємо можливість додавання *коментарів* до *ідей* у твоїй першій Rails програмі.
 
 Всі інструкції з початкового налаштування середовища Rails та побудови основної функціональності програми можна знайти [тут](/app).
 
@@ -18,7 +18,6 @@ permalink: commenting
 rails g scaffold comment user_name:string body:text idea_id:integer
 ~~~
 
-This will create a migration file that lets your database know about the new comments table. Run the migrations using
 Ця команда створить, зокрема, сценарій *міграції*, що "повідомить" базу даних про те, що створюється нова таблиця з коментарями. Цю міграцію треба виконати, запустивши в терміналі команду
 
 ~~~
@@ -56,7 +55,7 @@ belongs_to :idea
 
 ## 3. Малюємо форму для додавання нового коментаря та показуємо коментарі до ідей
 
-Відкрий файл app/views/ideas/show.html.erb та після `image_tag`
+Відкрий файл `app/views/ideas/show.html.erb` та після `image_tag`
 
 ~~~
 <%= image_tag(@idea.picture_url, :width => 600) if @idea.picture.present? %>
